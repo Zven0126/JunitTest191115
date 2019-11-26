@@ -34,12 +34,16 @@ public class ReflectTest {
 
         //加载类
         Class cls = Class.forName(className);
-        //创建对象
+        //创建对象1234
         Object obj  = cls.newInstance();
 
         Method method = cls.getMethod(methodName,String.class);
 
         method.invoke(obj,"12345");
+
+        String test = "一二三四五".substring(0,2);
+        String test1 = "一二123";
+        System.out.println(test1.contains(test));
 
 
     }
